@@ -1,34 +1,18 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   push_swap.c                                        :+:      :+:    :+:   */
+/*   ft_isdigit.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: ahammam <ahammam@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2022/05/13 22:19:09 by lahammam          #+#    #+#             */
-/*   Updated: 2022/05/22 18:27:03 by ahammam          ###   ########.fr       */
+/*   Created: 2022/05/21 16:47:32 by ahammam           #+#    #+#             */
+/*   Updated: 2022/05/21 17:03:22 by ahammam          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "push_swap.h"
+#include "libft.h"
 
-void print_exit(char *msg)
+int ft_isdigit(int c)
 {
-	ft_printf("%s \n", msg);
-	exit(EXIT_FAILURE);
-}
-
-int main(int argc, char **argv)
-{
-	t_list **stack_a;
-	// t_list **stack_b;
-
-	if (argc < 2)
-		return (0);
-	ft_arg_is_valid(argc, argv);
-	stack_a = (t_list **)malloc(sizeof(t_list));
-	// stack_b = (t_list **)malloc(sizeof(t_list));
-	initStack(stack_a, argc, argv);
-	ft_show_lst(*stack_a);
-	return (0);
+    return (c >= '0' && c <= '9');
 }

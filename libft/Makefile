@@ -3,10 +3,10 @@
 #                                                         :::      ::::::::    #
 #    Makefile                                           :+:      :+:    :+:    #
 #                                                     +:+ +:+         +:+      #
-#    By: lahammam <lahammam@student.42.fr>          +#+  +:+       +#+         #
+#    By: ahammam <ahammam@student.42.fr>            +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2022/05/08 14:42:29 by lahammam          #+#    #+#              #
-#    Updated: 2022/05/09 09:36:38 by lahammam         ###   ########.fr        #
+#    Updated: 2022/05/22 13:46:10 by ahammam          ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -21,7 +21,8 @@ SRC =	ft_printf.c \
 		ft_split.c \
 		ft_substr.c \
 		ft_itoa.c \
-		ft_atoi.c
+		ft_atoi.c \
+		ft_isdigit.c \
 
 OBJECTS = $(SRC:.c=.o)
 

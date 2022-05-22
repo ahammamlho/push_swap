@@ -3,17 +3,17 @@
 #                                                         :::      ::::::::    #
 #    Makefile                                           :+:      :+:    :+:    #
 #                                                     +:+ +:+         +:+      #
-#    By: lahammam <lahammam@student.42.fr>          +#+  +:+       +#+         #
+#    By: ahammam <ahammam@student.42.fr>            +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2022/05/09 09:53:49 by lahammam          #+#    #+#              #
-#    Updated: 2022/05/09 09:53:52 by lahammam         ###   ########.fr        #
+#    Updated: 2022/05/22 13:47:08 by ahammam          ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
 LIBFT_PATH		=	./libft
 LIBFT			=	$(LIBFT_PATH)/libft.a
 
-SRCS			= 	push_swap.c get_number.c get_arguments.c
+SRCS			= 	push_swap.c arg_valid.c initStack.c link_list.c
 OBJES 		= ${SRCS:.c=.o}
 
 NAME 		= push_swap
