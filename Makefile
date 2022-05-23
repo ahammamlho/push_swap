@@ -6,14 +6,14 @@
 #    By: ahammam <ahammam@student.42.fr>            +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2022/05/09 09:53:49 by lahammam          #+#    #+#              #
-#    Updated: 2022/05/22 13:47:08 by ahammam          ###   ########.fr        #
+#    Updated: 2022/05/23 13:09:45 by ahammam          ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
 LIBFT_PATH		=	./libft
 LIBFT			=	$(LIBFT_PATH)/libft.a
 
-SRCS			= 	push_swap.c arg_valid.c initStack.c link_list.c
+SRCS			= 	push_swap.c arg_valid.c initStack.c link_list.c is_sorted.c
 OBJES 		= ${SRCS:.c=.o}
 
 NAME 		= push_swap

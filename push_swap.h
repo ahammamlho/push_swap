@@ -6,7 +6,7 @@
 /*   By: ahammam <ahammam@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/05/08 14:29:43 by lahammam          #+#    #+#             */
-/*   Updated: 2022/05/22 14:00:40 by ahammam          ###   ########.fr       */
+/*   Updated: 2022/05/23 13:09:32 by ahammam          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -28,6 +28,7 @@ void ft_arg_is_valid(int argc, char **argv);
 void print_exit(char *msg);
 void initStack(t_list **stack_a, int argc, char **argv);
 void ft_free(char **str);
+int ft_is_sorted(t_list **stack);
 
 // link list
 t_list *ft_lstnew(int value);

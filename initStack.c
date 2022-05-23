@@ -1,3 +1,15 @@
+/* ************************************************************************** */
+/*                                                                            */
+/*                                                        :::      ::::::::   */
+/*   initStack.c                                        :+:      :+:    :+:   */
+/*                                                    +:+ +:+         +:+     */
+/*   By: ahammam <ahammam@student.42.fr>            +#+  +:+       +#+        */
+/*                                                +#+#+#+#+#+   +#+           */
+/*   Created: 2022/05/23 13:04:50 by ahammam           #+#    #+#             */
+/*   Updated: 2022/05/23 13:04:51 by ahammam          ###   ########.fr       */
+/*                                                                            */
+/* ************************************************************************** */
+
 
 
 #include "push_swap.h"
@@ -5,15 +17,15 @@
 int get_min(t_list *head)
 {
     t_list *temp;
-    int min;
+    long min;
 
     temp = head;
     if (!temp)
         return (-1);
-    min = temp->value;
+    min = 2147483647;
     while (temp)
     {
-        if (temp->index != -1 && min > temp->value)
+        if (temp->index == -1 && min > temp->value)
             min = temp->value;
         temp = temp->next;
     }
@@ -31,10 +43,10 @@ static void ft_index(t_list **stack_a)
     index = 0;
     while (temp)
     {
-        ft_printf("---");
         if (temp->value == min)
         {
-            temp->index = index++;
+            temp->index = index;
+            index++;
             temp = *stack_a;
             min = get_min(*stack_a);
         }
