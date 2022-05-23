@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   push_swap.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: lahammam <lahammam@student.42.fr>          +#+  +:+       +#+        */
+/*   By: ahammam <ahammam@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/05/13 22:19:09 by lahammam          #+#    #+#             */
-/*   Updated: 2022/05/23 13:56:08 by lahammam         ###   ########.fr       */
+/*   Updated: 2022/05/24 00:10:02 by ahammam          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -31,8 +31,7 @@ int main(int argc, char **argv)
 	// // stack_b = (t_list **)malloc(sizeof(t_list));
 	initStack(stack_a, argc, argv);
 	ft_swap(stack_a);
-	// ft_show_lst(*stack_a);
-	
-	
+	ft_show_lst(*stack_a);
+
 	return (0);
 }
