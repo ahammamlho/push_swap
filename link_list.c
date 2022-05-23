@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   link_list.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: ahammam <ahammam@student.42.fr>            +#+  +:+       +#+        */
+/*   By: lahammam <lahammam@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/05/21 17:17:55 by ahammam           #+#    #+#             */
-/*   Updated: 2022/05/22 18:41:29 by ahammam          ###   ########.fr       */
+/*   Updated: 2022/05/23 13:49:45 by lahammam         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -32,7 +32,7 @@ t_list *ft_lstlast(t_list *head)
     temp = head;
     if (!temp)
         return (0);
-    while (temp->next)
+    while ( temp->next)
         temp = temp->next;
     return (temp);
 }
@@ -40,12 +40,11 @@ t_list *ft_lstlast(t_list *head)
 void ft_lstadd_back(t_list **stack, t_list *new)
 {
     t_list *n;
-
+    
     if (*stack)
     {
         n = ft_lstlast(*stack);
         n->next = new;
-        new->next = NULL;
     }
     else
     {

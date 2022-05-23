@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   push_swap.h                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: ahammam <ahammam@student.42.fr>            +#+  +:+       +#+        */
+/*   By: lahammam <lahammam@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/05/08 14:29:43 by lahammam          #+#    #+#             */
-/*   Updated: 2022/05/23 13:09:32 by ahammam          ###   ########.fr       */
+/*   Updated: 2022/05/23 13:26:54 by lahammam         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -30,6 +30,8 @@ void initStack(t_list **stack_a, int argc, char **argv);
 void ft_free(char **str);
 int ft_is_sorted(t_list **stack);
 
+// operations
+void ft_swap(t_list **stack);
 // link list
 t_list *ft_lstnew(int value);
 void ft_lstadd_back(t_list **stack, t_list *new);
