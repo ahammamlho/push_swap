@@ -6,7 +6,7 @@
 /*   By: lahammam <lahammam@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/05/21 17:17:55 by ahammam           #+#    #+#             */
-/*   Updated: 2022/05/23 13:49:45 by lahammam         ###   ########.fr       */
+/*   Updated: 2022/05/24 01:29:58 by lahammam         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -51,6 +51,12 @@ void ft_lstadd_back(t_list **stack, t_list *new)
         *stack = new;
         (*stack)->next = NULL;
     }
+}
+
+void ft_lstadd_front(t_list **stack, t_list *new)
+{
+	new->next = *stack;
+	*stack = new;
 }
 
 void ft_show_lst(t_list *head)

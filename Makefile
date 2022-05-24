@@ -6,7 +6,7 @@
 #    By: lahammam <lahammam@student.42.fr>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2022/05/09 09:53:49 by lahammam          #+#    #+#              #
-#    Updated: 2022/05/23 13:51:11 by lahammam         ###   ########.fr        #
+#    Updated: 2022/05/24 00:27:17 by lahammam         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -29,7 +29,8 @@ all			:	$(NAME)
 
 $(NAME)		:	$(LIBFT) $(OBJES) push_swap.h
 				$(CC) $(OBJES) ${LIBFT} -o $(NAME)
-				$(MAKE) clean 
+				$(MAKE) clean
+				clear
 
 $(LIBFT)	:
 				$(MAKE) -C $(LIBFT_PATH)
