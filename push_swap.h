@@ -6,7 +6,7 @@
 /*   By: ahammam <ahammam@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/05/08 14:29:43 by lahammam          #+#    #+#             */
-/*   Updated: 2022/05/24 17:36:25 by ahammam          ###   ########.fr       */
+/*   Updated: 2022/05/24 17:48:18 by ahammam          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -29,6 +29,7 @@ void print_exit(char *msg);
 void initStack(t_list **stack_a, int argc, char **argv);
 void ft_free(char **str);
 int ft_is_sorted(t_list **stack);
+void free_stack(t_list **stack);
 
 // operations
 int ft_sa(t_list **stack_a);
