@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   push_swap.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: ahammam <ahammam@student.42.fr>            +#+  +:+       +#+        */
+/*   By: lahammam <lahammam@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/05/13 22:19:09 by lahammam          #+#    #+#             */
-/*   Updated: 2022/05/24 17:48:06 by ahammam          ###   ########.fr       */
+/*   Updated: 2022/05/25 12:50:13 by lahammam         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,7 +15,16 @@
 void print_exit(char *msg)
 {
 	ft_printf("%s \n", msg);
-	exit(EXIT_FAILURE);
+	exit(0);
+}
+
+
+static void ft_sort(t_list **stack_a, t_list **stack_b)
+{
+	if (ft_length_lst(*stack_a) <= 5)
+		ft_sort_simple(stack_a, stack_b);
+	else
+		print_exit("<<<<5");	
 }
 
 int main(int argc, char **argv)
@@ -41,7 +50,11 @@ int main(int argc, char **argv)
 	{
 		free_stack(stack_a);
 		free_stack(stack_b);
+		exit(0);
 	}
+	ft_sort(stack_a, stack_b);
+	ft_show_lst(*stack_a);
+	
 
 	return (0);
 }
