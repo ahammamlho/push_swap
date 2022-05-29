@@ -6,7 +6,7 @@
 /*   By: lahammam <lahammam@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/05/29 15:05:06 by ahammam           #+#    #+#             */
-/*   Updated: 2022/05/29 17:54:29 by lahammam         ###   ########.fr       */
+/*   Updated: 2022/05/29 22:00:56 by lahammam         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -22,10 +22,22 @@ static int	ft_do_commands(char *line, t_list **stack_a, t_list **stack_b)
 {
 	if (!(ft_strcmp(line, "sa\n")))
 		ft_sa(stack_a, 0);
+	else if (!(ft_strcmp(line, "sb\n")))
+		ft_sb(stack_a, 0);
+	else if (!(ft_strcmp(line, "ss\n")))
+		ft_ss(stack_a, stack_b, 0);
 	else if (!(ft_strcmp(line, "ra\n")))
 		ft_ra(stack_a, 0);
+	else if (!(ft_strcmp(line, "rb\n")))
+		ft_rb(stack_b, 0);
+	else if (!(ft_strcmp(line, "rr\n")))
+		ft_rr(stack_a, stack_b, 0);
 	else if (!(ft_strcmp(line, "rra\n")))
 		ft_rra(stack_a, 0);
+	else if (!(ft_strcmp(line, "rra\n")))
+		ft_rrr(stack_a, stack_b, 0);
+	else if (!(ft_strcmp(line, "rrb\n")))
+		ft_rrb(stack_b, 0);
 	else if (!(ft_strcmp(line, "pa\n")))
 		ft_push_a(stack_a, stack_b, 0);
 	else if (!(ft_strcmp(line, "pb\n")))

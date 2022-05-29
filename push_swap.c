@@ -6,7 +6,7 @@
 /*   By: lahammam <lahammam@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/05/13 22:19:09 by lahammam          #+#    #+#             */
-/*   Updated: 2022/05/29 17:54:23 by lahammam         ###   ########.fr       */
+/*   Updated: 2022/05/29 21:52:16 by lahammam         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -28,7 +28,7 @@ static void	ft_sort(t_list **stack_a, t_list **stack_b)
 
 int	main(int argc, char **argv)
 {
-	t_lis	**stack_a;
+	t_list	**stack_a;
 	t_list	**stack_b;
 
 	if (argc < 2)

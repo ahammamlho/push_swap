@@ -6,7 +6,7 @@
 /*   By: lahammam <lahammam@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/05/08 14:29:43 by lahammam          #+#    #+#             */
-/*   Updated: 2022/05/29 17:54:18 by lahammam         ###   ########.fr       */
+/*   Updated: 2022/05/29 21:49:22 by lahammam         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -32,6 +32,7 @@ int		ft_is_sorted(t_list **stack);
 void	free_stack(t_list **stack);
 
 void	ft_sort_simple(t_list **stack_a, t_list **stack_b);
+int		ft_index_min(t_list **stack_a, int min);
 void	ft_radix_sort(t_list **stack_a, t_list **stack_b);
 
 int		ft_sa(t_list **stack_a, int pr);

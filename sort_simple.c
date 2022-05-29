@@ -6,11 +6,22 @@
 /*   By: lahammam <lahammam@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/05/25 12:23:53 by lahammam          #+#    #+#             */
-/*   Updated: 2022/05/29 18:14:06 by lahammam         ###   ########.fr       */
+/*   Updated: 2022/05/29 21:51:22 by lahammam         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "push_swap.h"
+
+static void	ft_suit_three(t_list *head_a, t_list **stack_a, int min)
+{
+	if (head_a->index != min && head_a->index != (2 + min))
+	{
+		if (head_a->next->index == (2 + min))
+			ft_rra(stack_a, 1);
+		else
+			ft_sa(stack_a, 1);
+	}
+}
 
 static	void	ft_sort_three(t_list **stack_a, int min)
 {
@@ -35,30 +46,7 @@ static	void	ft_sort_three(t_list **stack_a, int min)
 			ft_rra(stack_a, 1);
 		}
 	}
-	else if (head_a->index != min && head_a->index != (2 + min))
-	{
-		if (head_a->next->index == (2 + min))
-			ft_rra(stack_a, 1);
-		else
-			ft_sa(stack_a, 1);
-	}
-}
-
-static int	ft_index_min(t_list **stack_a, int min)
-{
-	int		index_zero;
-	t_list	*head;
-
-	index_zero = 0;
-	head = *stack_a;
-	while (head)
-	{
-		if (head->index == min)
-			return (index_zero);
-		index_zero++;
-		head = head->next;
-	}
-	return (index_zero);
+	ft_suit_three(head_a, stack_a, min);
 }
 
 static void	ft_sort_for(t_list **stack_a, t_list **stack_b, int min)

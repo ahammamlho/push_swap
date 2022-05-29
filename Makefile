@@ -6,7 +6,7 @@
 #    By: lahammam <lahammam@student.42.fr>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2022/05/09 09:53:49 by lahammam          #+#    #+#              #
-#    Updated: 2022/05/29 17:34:48 by lahammam         ###   ########.fr        #
+#    Updated: 2022/05/29 22:02:00 by lahammam         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -22,7 +22,7 @@ SRCS			= 	push_swap.c \
 					operations/operations_rev_rotate.c \
 					operations/operations_rotate.c \
 					operations/operations_swap.c \
-					sort_simple.c \
+					sort_simple.c utile_sort_simple.c \
 					radix_sort.c
 					
 SRCS_B			= 	checker.c \
@@ -34,7 +34,7 @@ SRCS_B			= 	checker.c \
 					operations/operations_rev_rotate.c \
 					operations/operations_rotate.c \
 					operations/operations_swap.c \
-					sort_simple.c \
+					sort_simple.c utile_sort_simple.c \
 					radix_sort.c
 					
 OBJES 		= ${SRCS:.c=.o}
@@ -54,13 +54,9 @@ all			:	$(NAME)
 
 $(NAME)		:	$(LIBFT) $(OBJES) push_swap.h
 				$(CC) $(OBJES) ${LIBFT} -o $(NAME)
-				$(MAKE) clean
-				clear
 				
 $(NAME_B)	:   $(LIBFT) $(OBJES_B) push_swap.h
 				$(CC) $(OBJES_B) ${LIBFT} -o $(NAME_B)
-				$(MAKE) clean
-				clear
 
 $(LIBFT)	:
 				$(MAKE) -C $(LIBFT_PATH)
