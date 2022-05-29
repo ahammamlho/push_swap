@@ -6,34 +6,16 @@
 /*   By: ahammam <ahammam@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/05/25 12:23:53 by lahammam          #+#    #+#             */
-/*   Updated: 2022/05/28 18:36:19 by ahammam          ###   ########.fr       */
+/*   Updated: 2022/05/29 01:18:38 by ahammam          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "push_swap.h"
 
-static int get_max(t_list **stack)
-{
-	t_list *head;
-	int max;
-
-	head = *stack;
-	max = head->index;
-	while (head)
-	{
-		if (max < head->index)
-			max = head->index;
-		head = head->next;
-	}
-	return (max);
-}
-
 static void ft_sort_three(t_list **stack_a, int min)
 {
 	t_list *head_a;
-	int max;
 
-	max = get_max(stack_a);
 	head_a = *stack_a;
 	if (ft_is_sorted(stack_a))
 		return;
@@ -43,7 +25,7 @@ static void ft_sort_three(t_list **stack_a, int min)
 		ft_sa(stack_a);
 		ft_rra(stack_a);
 	}
-	else if (head_a->index == max)
+	else if (head_a->index == (2 + min))
 	{
 		if (head_a->next->index == min)
 			ft_ra(stack_a);
@@ -53,9 +35,9 @@ static void ft_sort_three(t_list **stack_a, int min)
 			ft_rra(stack_a);
 		}
 	}
-	else if (head_a->index != min && head_a->index != max)
+	else if (head_a->index != min && head_a->index != (2 + min))
 	{
-		if (head_a->next->index == max)
+		if (head_a->next->index == (2 + min))
 			ft_rra(stack_a);
 		else
 			ft_sa(stack_a);

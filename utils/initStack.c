@@ -3,16 +3,14 @@
 /*                                                        :::      ::::::::   */
 /*   initStack.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: lahammam <lahammam@student.42.fr>          +#+  +:+       +#+        */
+/*   By: ahammam <ahammam@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/05/23 13:04:50 by ahammam           #+#    #+#             */
-/*   Updated: 2022/05/24 00:26:41 by lahammam         ###   ########.fr       */
+/*   Updated: 2022/05/29 01:22:15 by ahammam          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-
-
-#include "push_swap.h"
+#include "../push_swap.h"
 
 int get_min(t_list *head)
 {

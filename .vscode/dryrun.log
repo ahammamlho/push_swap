@@ -1,0 +1,44 @@
+make --dry-run --always-make --keep-going --print-directory
+make: Entering directory `/Users/ahammam/Desktop/1337 projet/push_swap'
+/Library/Developer/CommandLineTools/usr/bin/make -C ./libft
+ 
+make[1]: Entering directory `/Users/ahammam/Desktop/1337 projet/push_swap/libft'
+cc -Wall -Wextra -Werror -c ft_printf.c -o ft_printf.o
+cc -Wall -Wextra -Werror -c ft_strdup.c -o ft_strdup.o
+cc -Wall -Wextra -Werror -c ft_strlen.c -o ft_strlen.o
+cc -Wall -Wextra -Werror -c ft_strjoin.c -o ft_strjoin.o
+cc -Wall -Wextra -Werror -c ft_split.c -o ft_split.o
+cc -Wall -Wextra -Werror -c ft_substr.c -o ft_substr.o
+cc -Wall -Wextra -Werror -c ft_itoa.c -o ft_itoa.o
+cc -Wall -Wextra -Werror -c ft_atoi.c -o ft_atoi.o
+cc -Wall -Wextra -Werror -c ft_isdigit.c -o ft_isdigit.o
+ar -rcs libft.a ft_printf.o ft_strdup.o ft_strlen.o ft_strjoin.o ft_split.o ft_substr.o ft_itoa.o ft_atoi.o ft_isdigit.o
+make[1]: Leaving directory `/Users/ahammam/Desktop/1337 projet/push_swap/libft'
+cc -Wall -Wextra -Werror -c push_swap.c -o push_swap.o
+cc -Wall -Wextra -Werror -c utils/arg_valid.c -o utils/arg_valid.o
+cc -Wall -Wextra -Werror -c utils/initStack.c -o utils/initStack.o
+ 
+cc -Wall -Wextra -Werror -c utils/link_list.c -o utils/link_list.o
+cc -Wall -Wextra -Werror -c utils/is_sorted.c -o utils/is_sorted.o
+cc -Wall -Wextra -Werror -c operations/operations_push.c -o operations/operations_push.o
+cc -Wall -Wextra -Werror -c operations/operations_rev_rotate.c -o operations/operations_rev_rotate.o
+cc -Wall -Wextra -Werror -c operations/operations_rotate.c -o operations/operations_rotate.o
+cc -Wall -Wextra -Werror -c operations/operations_swap.c -o operations/operations_swap.o
+cc -Wall -Wextra -Werror -c sort_simple.c -o sort_simple.o
+cc -Wall -Wextra -Werror -c radix_sort.c -o radix_sort.o
+cc push_swap.o utils/arg_valid.o utils/initStack.o utils/link_list.o utils/is_sorted.o operations/operations_push.o operations/operations_rev_rotate.o operations/operations_rotate.o operations/operations_swap.o sort_simple.o radix_sort.o ./libft/libft.a -o push_swap
+/Library/Developer/CommandLineTools/usr/bin/make clean
+ 
+make[1]: Entering directory `/Users/ahammam/Desktop/1337 projet/push_swap'
+/Library/Developer/CommandLineTools/usr/bin/make -C ./libft clean
+ 
+make[2]: Entering directory `/Users/ahammam/Desktop/1337 projet/push_swap/libft'
+ 
+rm -rf ft_printf.o ft_strdup.o ft_strlen.o ft_strjoin.o ft_split.o ft_substr.o ft_itoa.o ft_atoi.o ft_isdigit.o
+make[2]: Leaving directory `/Users/ahammam/Desktop/1337 projet/push_swap/libft'
+ 
+rm -rf push_swap.o utils/arg_valid.o utils/initStack.o utils/link_list.o utils/is_sorted.o operations/operations_push.o operations/operations_rev_rotate.o operations/operations_rotate.o operations/operations_swap.o sort_simple.o radix_sort.o
+make[1]: Leaving directory `/Users/ahammam/Desktop/1337 projet/push_swap'
+clear
+make: Leaving directory `/Users/ahammam/Desktop/1337 projet/push_swap'
+ 

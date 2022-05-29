@@ -6,11 +6,11 @@
 /*   By: ahammam <ahammam@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/05/23 13:04:29 by ahammam           #+#    #+#             */
-/*   Updated: 2022/05/28 16:23:56 by ahammam          ###   ########.fr       */
+/*   Updated: 2022/05/29 01:22:18 by ahammam          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "push_swap.h"
+#include "../push_swap.h"
 
 int ft_is_sorted(t_list **stack)
 {

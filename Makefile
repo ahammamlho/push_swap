@@ -6,14 +6,18 @@
 #    By: ahammam <ahammam@student.42.fr>            +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2022/05/09 09:53:49 by lahammam          #+#    #+#              #
-#    Updated: 2022/05/29 01:08:30 by ahammam          ###   ########.fr        #
+#    Updated: 2022/05/29 01:25:31 by ahammam          ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
 LIBFT_PATH		=	./libft
 LIBFT			=	$(LIBFT_PATH)/libft.a
 
-SRCS			= 	push_swap.c arg_valid.c initStack.c link_list.c is_sorted.c \
+SRCS			= 	push_swap.c \
+					utils/arg_valid.c \
+					utils/initStack.c \
+					utils/link_list.c \
+					utils/is_sorted.c \
 					operations/operations_push.c \
 					operations/operations_rev_rotate.c \
 					operations/operations_rotate.c \
