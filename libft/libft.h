@@ -6,7 +6,7 @@
 /*   By: ahammam <ahammam@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/05/08 14:41:20 by lahammam          #+#    #+#             */
-/*   Updated: 2022/05/22 13:45:51 by ahammam          ###   ########.fr       */
+/*   Updated: 2022/05/29 15:46:06 by ahammam          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -31,6 +31,8 @@ char *ft_substr(char const *s, unsigned int start, size_t len);
 char *ft_itoa(int n);
 int ft_atoi(const char *str);
 int ft_isdigit(int c);
+int ft_strcmp(const char *s1, const char *s2);
+char *get_next_line(int fd);
 // void *ft_calloc(size_t count, size_t size);
 
 #endif

@@ -6,7 +6,7 @@
 /*   By: ahammam <ahammam@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/05/13 22:19:09 by lahammam          #+#    #+#             */
-/*   Updated: 2022/05/29 01:21:10 by ahammam          ###   ########.fr       */
+/*   Updated: 2022/05/29 15:50:00 by ahammam          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -46,6 +46,6 @@ int main(int argc, char **argv)
 		exit(0);
 	}
 	ft_sort(stack_a, stack_b);
-	ft_show_lst(*stack_a);
+	// ft_show_lst(*stack_a);
 	return (0);
 }

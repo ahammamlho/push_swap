@@ -6,7 +6,7 @@
 /*   By: ahammam <ahammam@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/05/08 14:29:43 by lahammam          #+#    #+#             */
-/*   Updated: 2022/05/29 00:55:58 by ahammam          ###   ########.fr       */
+/*   Updated: 2022/05/29 15:37:34 by ahammam          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -34,17 +34,17 @@ void free_stack(t_list **stack);
 void ft_sort_simple(t_list **stack_a, t_list **stack_b);
 void ft_radix_sort(t_list **stack_a, t_list **stack_b);
 // operations
-int ft_sa(t_list **stack_a);
-int ft_sb(t_list **stack_b);
-int ft_ss(t_list **stack_a, t_list **stack_b);
-int ft_push_a(t_list **stack_a, t_list **stack_b);
-int ft_push_b(t_list **stack_a, t_list **stack_b);
-int ft_ra(t_list **stack_a);
-int ft_rb(t_list **stack_b);
-int ft_rr(t_list **stack_a, t_list **stack_b);
-int ft_rra(t_list **stack_a);
-int ft_rrb(t_list **stack_b);
-int ft_rrr(t_list **stack_a, t_list **stack_b);
+int ft_sa(t_list **stack_a, int pr);
+int ft_sb(t_list **stack_b, int pr);
+int ft_ss(t_list **stack_a, t_list **stack_b, int pr);
+int ft_push_a(t_list **stack_a, t_list **stack_b, int pr);
+int ft_push_b(t_list **stack_a, t_list **stack_b, int pr);
+int ft_ra(t_list **stack_a, int pr);
+int ft_rb(t_list **stack_b, int pr);
+int ft_rr(t_list **stack_a, t_list **stack_b, int pr);
+int ft_rra(t_list **stack_a, int pr);
+int ft_rrb(t_list **stack_b, int pr);
+int ft_rrr(t_list **stack_a, t_list **stack_b, int pr);
 // link list
 t_list *ft_lstnew(int value);
 void ft_lstadd_back(t_list **stack, t_list *new);

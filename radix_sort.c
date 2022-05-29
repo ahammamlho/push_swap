@@ -6,7 +6,7 @@
 /*   By: ahammam <ahammam@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/05/29 00:54:49 by ahammam           #+#    #+#             */
-/*   Updated: 2022/05/29 01:11:51 by ahammam          ###   ########.fr       */
+/*   Updated: 2022/05/29 15:38:02 by ahammam          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -31,6 +31,7 @@ static int get_max_bits(t_list **stack_a)
         max_bits++;
     return (max_bits);
 }
+
 void ft_radix_sort(t_list **stack_a, t_list **stack_b)
 {
     int i;
@@ -48,14 +49,14 @@ void ft_radix_sort(t_list **stack_a, t_list **stack_b)
         while (j < lenght)
         {
             head_a = *stack_a;
-            if (((head_a->index >> i) & 1) == 1) // if (((head_a->index >> i) & 1) == 1)
-                ft_ra(stack_a);
+            if (((head_a->index >> i) & 1) == 1)
+                ft_ra(stack_a, 1);
             else
-                ft_push_b(stack_a, stack_b);
+                ft_push_b(stack_a, stack_b, 1);
             j++;
         }
         while (ft_length_lst(*stack_b))
-            ft_push_a(stack_a, stack_b);
+            ft_push_a(stack_a, stack_b, 1);
         i++;
     }
 }

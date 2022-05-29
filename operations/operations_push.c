@@ -6,7 +6,7 @@
 /*   By: ahammam <ahammam@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/05/24 17:37:13 by ahammam           #+#    #+#             */
-/*   Updated: 2022/05/24 17:41:08 by ahammam          ###   ########.fr       */
+/*   Updated: 2022/05/29 15:31:36 by ahammam          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -28,18 +28,20 @@ static int ft_push(t_list **a, t_list **b)
     return (1);
 }
 
-int ft_push_a(t_list **stack_a, t_list **stack_b)
+int ft_push_a(t_list **stack_a, t_list **stack_b, int pr)
 {
     if (ft_push(stack_a, stack_b) == 0)
         return (0);
-    ft_printf("pa\n");
+    if (pr)
+        ft_printf("pa\n");
     return (1);
 }
 
-int ft_push_b(t_list **stack_a, t_list **stack_b)
+int ft_push_b(t_list **stack_a, t_list **stack_b, int pr)
 {
     if (ft_push(stack_b, stack_a) == 0)
         return (0);
-    ft_printf("pb\n");
+    if (pr)
+        ft_printf("pb\n");
     return (1);
 }
