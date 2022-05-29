@@ -3,10 +3,10 @@
 #                                                         :::      ::::::::    #
 #    Makefile                                           :+:      :+:    :+:    #
 #                                                     +:+ +:+         +:+      #
-#    By: lahammam <lahammam@student.42.fr>          +#+  +:+       +#+         #
+#    By: ahammam <ahammam@student.42.fr>            +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2022/05/09 09:53:49 by lahammam          #+#    #+#              #
-#    Updated: 2022/05/25 12:34:37 by lahammam         ###   ########.fr        #
+#    Updated: 2022/05/29 01:08:30 by ahammam          ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -18,7 +18,8 @@ SRCS			= 	push_swap.c arg_valid.c initStack.c link_list.c is_sorted.c \
 					operations/operations_rev_rotate.c \
 					operations/operations_rotate.c \
 					operations/operations_swap.c \
-					sort_simple.c
+					sort_simple.c \
+					radix_sort.c
 					
 OBJES 		= ${SRCS:.c=.o}
 
