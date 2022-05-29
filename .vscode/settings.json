@@ -4,6 +4,7 @@
 		"stdio.h": "c",
 		"so_long.h": "c",
 		"so_long_bonus.h": "c",
-		"push_swap.h": "c"
+		"push_swap.h": "c",
+		"stdlib.h": "c"
 	}
 }

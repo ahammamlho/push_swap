@@ -3,18 +3,18 @@
 /*                                                        :::      ::::::::   */
 /*   get_next_line.c                                    :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: ahammam <ahammam@student.42.fr>            +#+  +:+       +#+        */
+/*   By: lahammam <lahammam@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/05/08 13:34:56 by lahammam          #+#    #+#             */
-/*   Updated: 2022/05/29 15:45:58 by ahammam          ###   ########.fr       */
+/*   Updated: 2022/05/29 18:08:28 by lahammam         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-static int is_endl(char *str)
+static int	is_endl(char *str)
 {
-	int i;
+	int	i;
 
 	i = 0;
 	while (str[i] != '\n' && str[i] != '\0')
@@ -24,10 +24,10 @@ static int is_endl(char *str)
 	return (0);
 }
 
-static char *get_line(char **buffer_backup)
+static char	*get_line(char **buffer_backup)
 {
-	char *line;
-	int i;
+	char	*line;
+	int		i;
 
 	i = 0;
 	if (!buffer_backup)
@@ -43,10 +43,10 @@ static char *get_line(char **buffer_backup)
 	return (line);
 }
 
-static char *get_backup(char **buffer_backup)
+static char	*get_backup(char **buffer_backup)
 {
-	char *backup;
-	int i;
+	char	*backup;
+	int		i;
 
 	i = 0;
 	if (!buffer_backup)
@@ -68,10 +68,10 @@ static char *get_backup(char **buffer_backup)
 	return (backup);
 }
 
-static int read_file(int fd, char **buffer, char **buffer_backup, char **line)
+static int	read_file(int fd, char **buffer, char **buffer_backup, char **line)
 {
-	int bytes_read;
-	char *holder;
+	int		bytes_read;
+	char	*holder;
 
 	bytes_read = 1;
 	while (is_endl(*buffer_backup) != 1 && bytes_read > 0)
@@ -93,12 +93,12 @@ static int read_file(int fd, char **buffer, char **buffer_backup, char **line)
 	return (bytes_read);
 }
 
-char *get_next_line(int fd)
+char	*get_next_line(int fd)
 {
-	char *buffer;
-	static char *buffer_backup = 0;
-	char *line;
-	int bytes_read;
+	char		*buffer;
+	static char	*buffer_backup = 0;
+	char		*line;
+	int			bytes_read;
 
 	if (fd < 0 || BUFFER_SIZE <= 0)
 		return (NULL);

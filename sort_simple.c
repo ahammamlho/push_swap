@@ -3,22 +3,22 @@
 /*                                                        :::      ::::::::   */
 /*   sort_simple.c                                      :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: ahammam <ahammam@student.42.fr>            +#+  +:+       +#+        */
+/*   By: lahammam <lahammam@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/05/25 12:23:53 by lahammam          #+#    #+#             */
-/*   Updated: 2022/05/29 16:02:22 by ahammam          ###   ########.fr       */
+/*   Updated: 2022/05/29 18:14:06 by lahammam         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "push_swap.h"
 
-static void ft_sort_three(t_list **stack_a, int min)
+static	void	ft_sort_three(t_list **stack_a, int min)
 {
-	t_list *head_a;
+	t_list	*head_a;
 
 	head_a = *stack_a;
 	if (ft_is_sorted(stack_a))
-		return;
+		return ;
 	if (head_a->index == min)
 	{
 		ft_ra(stack_a, 1);
@@ -44,10 +44,10 @@ static void ft_sort_three(t_list **stack_a, int min)
 	}
 }
 
-static int ft_index_min(t_list **stack_a, int min)
+static int	ft_index_min(t_list **stack_a, int min)
 {
-	int index_zero;
-	t_list *head;
+	int		index_zero;
+	t_list	*head;
 
 	index_zero = 0;
 	head = *stack_a;
@@ -61,9 +61,9 @@ static int ft_index_min(t_list **stack_a, int min)
 	return (index_zero);
 }
 
-static void ft_sort_for(t_list **stack_a, t_list **stack_b, int min)
+static void	ft_sort_for(t_list **stack_a, t_list **stack_b, int min)
 {
-	int index_zero;
+	int	index_zero;
 
 	index_zero = ft_index_min(stack_a, min);
 	if (index_zero == 1)
@@ -75,15 +75,15 @@ static void ft_sort_for(t_list **stack_a, t_list **stack_b, int min)
 			ft_rra(stack_a, 1);
 	}
 	if (ft_is_sorted(stack_a))
-		return;
+		return ;
 	ft_push_b(stack_a, stack_b, 1);
 	ft_sort_three(stack_a, 1 + min);
 	ft_push_a(stack_a, stack_b, 1);
 }
 
-static void ft_sort_five(t_list **stack_a, t_list **stack_b)
+static void	ft_sort_five(t_list **stack_a, t_list **stack_b)
 {
-	int index_zero;
+	int	index_zero;
 
 	index_zero = ft_index_min(stack_a, 0);
 	if (index_zero == 1)
@@ -101,14 +101,15 @@ static void ft_sort_five(t_list **stack_a, t_list **stack_b)
 	else if (index_zero == 4)
 		ft_rra(stack_a, 1);
 	if (ft_is_sorted(stack_a))
-		return;
+		return ;
 	ft_push_b(stack_a, stack_b, 1);
 	ft_sort_for(stack_a, stack_b, 1);
 	ft_push_a(stack_a, stack_b, 1);
 }
-void ft_sort_simple(t_list **stack_a, t_list **stack_b)
+
+void	ft_sort_simple(t_list **stack_a, t_list **stack_b)
 {
-	int length;
+	int	length;
 
 	length = ft_length_lst(*stack_a);
 	if (length == 2)

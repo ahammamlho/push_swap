@@ -3,10 +3,10 @@
 #                                                         :::      ::::::::    #
 #    Makefile                                           :+:      :+:    :+:    #
 #                                                     +:+ +:+         +:+      #
-#    By: ahammam <ahammam@student.42.fr>            +#+  +:+       +#+         #
+#    By: lahammam <lahammam@student.42.fr>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2022/05/09 09:53:49 by lahammam          #+#    #+#              #
-#    Updated: 2022/05/29 15:49:21 by ahammam          ###   ########.fr        #
+#    Updated: 2022/05/29 17:34:48 by lahammam         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -70,10 +70,12 @@ bonus		: $(NAME_B)
 clean		:
 				$(MAKE) -C $(LIBFT_PATH) clean
 				$(RM) $(OBJES)
+				$(RM) $(OBJES_B)
 
 fclean		:	clean
 				$(MAKE) -C $(LIBFT_PATH) fclean
 				$(RM) $(NAME)
+				$(RM) $(NAME_B)
 
 re			:	clean all
 
