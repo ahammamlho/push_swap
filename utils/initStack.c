@@ -6,7 +6,7 @@
 /*   By: lahammam <lahammam@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/05/23 13:04:50 by ahammam           #+#    #+#             */
-/*   Updated: 2022/05/29 17:54:08 by lahammam         ###   ########.fr       */
+/*   Updated: 2022/06/04 15:07:42 by lahammam         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,7 +15,7 @@
 int	get_min(t_list *head)
 {
 	t_list	*temp;
-	long	min;
+	int		min;
 
 	temp = head;
 	if (!temp)
@@ -41,7 +41,7 @@ static void	ft_index(t_list **stack_a)
 	index = 0;
 	while (temp)
 	{
-		if (temp->value == min)
+		if (temp->index == -1 && temp->value == min)
 		{
 			temp->index = index;
 			index++;
@@ -51,6 +51,7 @@ static void	ft_index(t_list **stack_a)
 		else
 			temp = temp->next;
 	}
+	
 }
 
 void	ft_init_stack(t_list **stack_a, int argc, char **argv)

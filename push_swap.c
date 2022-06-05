@@ -6,17 +6,11 @@
 /*   By: lahammam <lahammam@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/05/13 22:19:09 by lahammam          #+#    #+#             */
-/*   Updated: 2022/05/29 21:52:16 by lahammam         ###   ########.fr       */
+/*   Updated: 2022/06/04 14:46:29 by lahammam         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "push_swap.h"
-
-void	print_exit(char *msg)
-{
-	ft_printf("%s \n", msg);
-	exit(0);
-}
 
 static void	ft_sort(t_list **stack_a, t_list **stack_b)
 {
@@ -39,6 +33,7 @@ int	main(int argc, char **argv)
 	*stack_a = 0;
 	*stack_b = 0;
 	ft_init_stack(stack_a, argc, argv);
+	
 	if (ft_is_sorted(stack_a) == 1)
 	{
 		free_stack(stack_a);

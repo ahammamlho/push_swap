@@ -6,11 +6,17 @@
 /*   By: lahammam <lahammam@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/05/13 22:20:06 by lahammam          #+#    #+#             */
-/*   Updated: 2022/05/29 18:06:36 by lahammam         ###   ########.fr       */
+/*   Updated: 2022/06/04 15:06:07 by lahammam         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
+
+void	print_exit(char *msg)
+{
+	ft_printf("%s \n", msg);
+	exit(0);
+}
 
 static int	ft_isspace(char c)
 {
@@ -43,5 +49,7 @@ int	ft_atoi(const char *str)
 		result = result * 10 + str[i] - '0';
 		i++;
 	}
+	if ((sign * result) < -2147483648 || (sign * result) > 2147483647)
+			print_exit("Error");
 	return ((int )(sign * result));
 }

@@ -6,7 +6,7 @@
 /*   By: lahammam <lahammam@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/05/29 17:47:13 by lahammam          #+#    #+#             */
-/*   Updated: 2022/05/29 18:04:02 by lahammam         ###   ########.fr       */
+/*   Updated: 2022/06/04 14:27:10 by lahammam         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -71,8 +71,6 @@ void	ft_arg_is_valid(int argc, char **argv)
 	{
 		temp = ft_atoi(str[i]);
 		if (!ft_isnumber(str[i]))
-			print_exit("Error");
-		if (temp < -2147483648 || temp > 2147483647)
 			print_exit("Error");
 		if (ft_is_duplicated(temp, str, i))
 			print_exit("Error");

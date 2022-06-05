@@ -6,7 +6,7 @@
 /*   By: lahammam <lahammam@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/05/25 12:23:53 by lahammam          #+#    #+#             */
-/*   Updated: 2022/05/29 21:51:22 by lahammam         ###   ########.fr       */
+/*   Updated: 2022/06/03 22:57:59 by lahammam         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -46,7 +46,8 @@ static	void	ft_sort_three(t_list **stack_a, int min)
 			ft_rra(stack_a, 1);
 		}
 	}
-	ft_suit_three(head_a, stack_a, min);
+	else
+		ft_suit_three(head_a, stack_a, min);
 }
 
 static void	ft_sort_for(t_list **stack_a, t_list **stack_b, int min)
